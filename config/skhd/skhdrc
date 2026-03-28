@@ -6,6 +6,12 @@ cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d
 # Close focused window
 hyper - q : yabai -m window --close
 
+# Create new space and focus it
+hyper - n : yabai -m space --create && yabai -m space --focus last
+
+# Delete current space and focus previous
+hyper - x : yabai -m space --destroy && yabai -m space --focus prev
+
 # Restart Yabai
 ctrl + alt - r : yabai --restart-service
 
